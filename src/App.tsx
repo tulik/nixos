@@ -3,9 +3,8 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import { TutorialProvider, useTutorial } from './contexts/TutorialContext';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import TutorialStep from './components/TutorialStep';
-import NixOSIcon from './components/NixOSIcon';
+import AppIcon from './components/AppIcon';
 import ThemeToggle from './components/ThemeToggle';
-import { StepNavigator } from './components/StepNavigator';
 import { StartCard } from './components/StartCard';
 import { CompletionCard } from './components/CompletionCard';
 
@@ -26,14 +25,14 @@ function AppContent() {
   } = useTutorial();
 
   return (
-    <div className="min-h-screen flex flex-col selection:bg-nix-blue selection:text-white transition-colors duration-300">
+    <div className="min-h-screen flex flex-col selection:bg-brand-blue selection:text-white transition-colors duration-300">
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1.5 bg-surface z-50">
         <div
           className="h-full progress-bar-glow transition-all duration-500 ease-out"
           style={{
             width: `${progress}%`,
-            background: 'linear-gradient(90deg, var(--nix-blue) 0%, var(--nix-accent) 50%, var(--nix-light) 100%)'
+            background: 'linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-accent) 50%, var(--brand-light) 100%)'
           }}
         />
       </div>
@@ -46,7 +45,7 @@ function AppContent() {
         <header className="text-center mb-20 space-y-6 animate-fade-in">
           <div className="inline-block">
             <h1 className="inline-flex items-center justify-center gap-5 text-5xl md:text-7xl font-bold text-text-primary">
-              <NixOSIcon className="w-16 h-16 md:w-20 md:h-20 transition-transform duration-700 ease-out hover:scale-110 hover:rotate-12" />
+              <AppIcon className="w-16 h-16 md:w-20 md:h-20 transition-transform duration-700 ease-out hover:scale-110 hover:rotate-12" />
               <span className="bg-gradient-to-br from-text-primary to-text-secondary bg-clip-text">Nix on macOS</span>
             </h1>
           </div>
@@ -64,7 +63,6 @@ function AppContent() {
             />
           ) : (
             <>
-              <StepNavigator />
               <TutorialStep
                 step={currentStep}
                 onNext={goToNext}

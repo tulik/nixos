@@ -4,7 +4,7 @@ import { tutorialSteps } from '../data/tutorialSteps';
 
 const TutorialContext = createContext<TutorialContextValue | undefined>(undefined);
 
-const STORAGE_KEY = 'nixos-tutorial-progress';
+const STORAGE_KEY = 'react-app-tutorial-progress';
 const DEFAULT_PHASE: TutorialPhase = 'start';
 
 type StoredProgress = {

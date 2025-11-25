@@ -1,6 +1,6 @@
-# NixOS on macOS
+# react-app on macOS
 
-A simple React application demonstrating NixOS concepts on macOS.
+A simple React application demonstrating react-app concepts on macOS.
 
 ## Development
 

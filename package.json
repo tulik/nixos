@@ -1,5 +1,5 @@
 {
-  "name": "nixos-macos",
+  "name": "react-app-macos",
   "private": true,
   "version": "0.0.0",
   "type": "module",
