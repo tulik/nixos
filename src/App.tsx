@@ -20,13 +20,13 @@ function StepNavigator() {
             key={step.id}
             onClick={() => goToStep(index)}
             className={`group relative h-2 rounded-full transition-all duration-500 ease-out ${index === currentStepIndex
-              ? 'w-12 bg-nix-blue shadow-lg shadow-nix-blue/30'
-              : 'w-2 bg-surface-hover hover:bg-nix-light hover:w-3'
+              ? 'w-12 bg-brand-blue shadow-lg shadow-brand-blue/30'
+              : 'w-2 bg-surface-hover hover:bg-brand-light hover:w-3'
               }`}
             aria-label={`Go to step ${index + 1}: ${step.title}`}
             title={step.title}
           >
-            <span className="absolute bottom-full mb-2.5 left-1/2 -translate-x-1/2 px-3 py-1.5 text-xs font-medium text-white bg-nix-dark/95 backdrop-blur-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none z-20 shadow-lg">
+            <span className="absolute bottom-full mb-2.5 left-1/2 -translate-x-1/2 px-3 py-1.5 text-xs font-medium text-white bg-brand-dark/95 backdrop-blur-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none z-20 shadow-lg">
               {step.title}
             </span>
           </button>
@@ -43,11 +43,11 @@ function StartCard({ onStart, totalSteps }: { onStart: () => void; totalSteps: n
 
   return (
     <div className="premium-card p-8 md:p-12 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-nix-blue/6 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-brand-blue/6 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="flex items-start justify-between gap-4 mb-6">
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-nix-blue/80">Start</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-blue/80">Start</p>
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary tracking-tight">{tutorialIntro.title}</h2>
         </div>
         <div className="px-3 py-1 rounded-full bg-surface text-text-secondary text-sm font-semibold border border-border/70 shadow-sm">
@@ -61,13 +61,13 @@ function StartCard({ onStart, totalSteps }: { onStart: () => void; totalSteps: n
 
       {tutorialIntro.concept && (
         <div className="glass-card p-6 mb-8 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-24 h-24 bg-nix-blue/8 rounded-full blur-2xl" aria-hidden="true" />
+          <div className="absolute top-0 left-0 w-24 h-24 bg-brand-blue/8 rounded-full blur-2xl" aria-hidden="true" />
 
           <div className="flex items-center gap-3 mb-3 relative">
-            <div className="p-2 rounded-xl bg-nix-blue/10 text-nix-blue" aria-hidden="true">
+            <div className="p-2 rounded-xl bg-brand-blue/10 text-brand-blue" aria-hidden="true">
               <IntroIcon className="w-5 h-5" />
             </div>
-            <span className="font-bold text-lg text-nix-blue tracking-tight">Unix Concept: {tutorialIntro.concept.title}</span>
+            <span className="font-bold text-lg text-brand-blue tracking-tight">Unix Concept: {tutorialIntro.concept.title}</span>
           </div>
           <p className="text-text-secondary leading-relaxed relative">{tutorialIntro.concept.text}</p>
         </div>
@@ -97,11 +97,11 @@ function CompletionCard({ onRestart }: { onRestart: () => void }) {
 
   return (
     <div className="premium-card p-8 md:p-12 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-nix-blue/6 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-brand-blue/6 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="flex items-start justify-between gap-4 mb-6">
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-nix-blue/80">Finish</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-blue/80">Finish</p>
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary tracking-tight">{tutorialOutro.title}</h2>
         </div>
         <div className="px-3 py-1 rounded-full bg-surface text-text-secondary text-sm font-semibold border border-border/70 shadow-sm">
@@ -115,13 +115,13 @@ function CompletionCard({ onRestart }: { onRestart: () => void }) {
 
       {tutorialOutro.concept && (
         <div className="glass-card p-6 mb-8 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-24 h-24 bg-nix-blue/8 rounded-full blur-2xl" aria-hidden="true" />
+          <div className="absolute top-0 left-0 w-24 h-24 bg-brand-blue/8 rounded-full blur-2xl" aria-hidden="true" />
 
           <div className="flex items-center gap-3 mb-3 relative">
-            <div className="p-2 rounded-xl bg-nix-blue/10 text-nix-blue" aria-hidden="true">
+            <div className="p-2 rounded-xl bg-brand-blue/10 text-brand-blue" aria-hidden="true">
               <OutroIcon className="w-5 h-5" />
             </div>
-            <span className="font-bold text-lg text-nix-blue tracking-tight">Unix Concept: {tutorialOutro.concept.title}</span>
+            <span className="font-bold text-lg text-brand-blue tracking-tight">Unix Concept: {tutorialOutro.concept.title}</span>
           </div>
           <p className="text-text-secondary leading-relaxed relative">{tutorialOutro.concept.text}</p>
         </div>
@@ -163,14 +163,14 @@ function AppContent() {
   } = useTutorial();
 
   return (
-    <div className="min-h-screen flex flex-col selection:bg-nix-blue selection:text-white transition-colors duration-300">
+    <div className="min-h-screen flex flex-col selection:bg-brand-blue selection:text-white transition-colors duration-300">
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1.5 bg-surface z-50">
         <div
           className="h-full progress-bar-glow transition-all duration-500 ease-out"
           style={{
             width: `${progress}%`,
-            background: 'linear-gradient(90deg, var(--nix-blue) 0%, var(--nix-accent) 50%, var(--nix-light) 100%)'
+            background: 'linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-accent) 50%, var(--brand-light) 100%)'
           }}
         />
       </div>
