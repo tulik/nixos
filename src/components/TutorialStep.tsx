@@ -32,7 +32,7 @@ const TutorialStep = ({ step, onNext, onPrev, isFirst, isLast, stepIndex, totalS
     return (
         <div className="premium-card p-8 md:p-12 relative overflow-hidden">
             {/* Decorative gradient overlay */}
-            <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-nix-blue/6 to-transparent rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-brand-blue/6 to-transparent rounded-full blur-3xl pointer-events-none" />
 
             <div className="flex items-start justify-between gap-4 mb-5">
                 <h2 className="text-3xl md:text-4xl font-bold text-text-primary relative tracking-tight">
@@ -63,7 +63,7 @@ const TutorialStep = ({ step, onNext, onPrev, isFirst, isLast, stepIndex, totalS
                     </div>
                     {/* Terminal Content */}
                     <div className="p-5 md:p-6 overflow-x-auto bg-gradient-to-br from-zinc-900 to-zinc-900/95">
-                        <pre className="font-mono text-sm md:text-base text-nix-light leading-relaxed">
+                        <pre className="font-mono text-sm md:text-base text-brand-light leading-relaxed">
                             <code>{step.command.trim()}</code>
                         </pre>
                     </div>
@@ -73,13 +73,13 @@ const TutorialStep = ({ step, onNext, onPrev, isFirst, isLast, stepIndex, totalS
             {step.concept && (
                 <div className="glass-card p-7 mb-10 relative overflow-hidden group transition-all duration-500 hover:shadow-lg">
                     {/* Icon glow effect */}
-                    <div className="absolute top-0 left-0 w-32 h-32 bg-nix-blue/8 rounded-full blur-2xl group-hover:bg-nix-blue/15 transition-all duration-700" />
+                    <div className="absolute top-0 left-0 w-32 h-32 bg-brand-blue/8 rounded-full blur-2xl group-hover:bg-brand-blue/15 transition-all duration-700" />
 
                     <div className="flex items-center gap-3 mb-4 relative">
-                        <div className="p-2 rounded-xl bg-nix-blue/10 text-nix-blue transition-all duration-300 group-hover:bg-nix-blue/15 group-hover:scale-105" aria-hidden="true">
+                        <div className="p-2 rounded-xl bg-brand-blue/10 text-brand-blue transition-all duration-300 group-hover:bg-brand-blue/15 group-hover:scale-105" aria-hidden="true">
                             <IconComponent className="w-6 h-6" />
                         </div>
-                        <span className="font-bold text-lg md:text-xl text-nix-blue tracking-tight">Unix Concept: {step.concept.title}</span>
+                        <span className="font-bold text-lg md:text-xl text-brand-blue tracking-tight">Unix Concept: {step.concept.title}</span>
                     </div>
                     <p className="text-text-secondary leading-relaxed text-base md:text-lg relative">
                         {step.concept.text}

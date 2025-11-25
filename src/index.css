@@ -2,17 +2,10 @@
 
 :root {
   /* Brand Colors */
-<<<<<<< Updated upstream
-  --nix-blue: #5277C3;
-  --nix-light: #7EB6E1;
-  --nix-dark: #27385D;
-  --nix-accent: #4A90E2;
-=======
-  --brand-primary: #c35252;
-  --brand-light: #e17e7e;
-  --brand-dark: #5d2727;
-  --brand-accent: #e24a4a;
->>>>>>> Stashed changes
+  --brand-blue: #5277C3;
+  --brand-light: #7EB6E1;
+  --brand-dark: #27385D;
+  --brand-accent: #4A90E2;
 
   /* Light Mode Base */
   --bg-background: #fafafa;
@@ -54,10 +47,10 @@
 }
 
 @theme {
-  --color-nix-blue: var(--nix-blue);
-  --color-nix-light: var(--nix-light);
-  --color-nix-dark: var(--nix-dark);
-  --color-nix-accent: var(--nix-accent);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-light: var(--brand-light);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-accent: var(--brand-accent);
 
   --color-surface: var(--bg-surface);
   --color-surface-hover: var(--bg-surface-hover);
@@ -93,7 +86,7 @@
 
   code {
     @apply font-mono bg-surface px-2 py-1 rounded-md text-sm border border-border;
-    color: var(--nix-blue);
+    color: var(--brand-blue);
   }
 }
 
@@ -143,13 +136,13 @@
 }
 
 @utility gradient-primary {
-  background: linear-gradient(135deg, var(--nix-blue) 0%, var(--nix-accent) 100%);
+  background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-accent) 100%);
   @apply text-white transition-all duration-300 ease-out;
   box-shadow: 0 4px 14px -2px rgba(82, 119, 195, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
 }
 
 .gradient-primary:hover {
-  background: linear-gradient(135deg, var(--nix-accent) 0%, var(--nix-light) 100%);
+  background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-light) 100%);
   box-shadow: 0 10px 24px -4px rgba(82, 119, 195, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
   transform: translateY(-2px);
 }
@@ -250,7 +243,7 @@ html {
 
 /* Focus visible styles */
 *:focus-visible {
-  outline: 2px solid var(--nix-blue);
+  outline: 2px solid var(--brand-blue);
   outline-offset: 2px;
   border-radius: 4px;
 }
