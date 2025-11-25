@@ -2,17 +2,10 @@
 
 :root {
   /* Brand Colors */
-<<<<<<< Updated upstream
   --nix-blue: #5277C3;
   --nix-light: #7EB6E1;
   --nix-dark: #27385D;
   --nix-accent: #4A90E2;
-=======
-  --brand-primary: #c35252;
-  --brand-light: #e17e7e;
-  --brand-dark: #5d2727;
-  --brand-accent: #e24a4a;
->>>>>>> Stashed changes
 
   /* Light Mode Base */
   --bg-background: #fafafa;
